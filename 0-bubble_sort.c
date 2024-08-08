@@ -12,23 +12,20 @@ void bubble_sort(int *array, size_t size)
 	if ((array != NULL) || (size < 2))
 	{
 		i = 1;
-		sorted = 1;
-		while (i < size)
+		sorted = 0;
+		while (sorted == 0)
 		{
-			if (array[i] > array[i - 1])
+			sorted = 1;
+			while (i < size)
 			{
-				tmp = array[i - 1];
-				array[i - 1] = array[i];
-				array[i] = tmp;
-				sorted = 0;
-			}
-			i++;
-			if (i == size)
-			{
-				if (sorted == 1)
-					break;
-				if (sorted == 0)
-					i = 0;
+				if (array[i] < array[i - 1])
+				{
+					tmp = array[i - 1];
+					array[i - 1] = array[i];
+					array[i] = tmp;
+					sorted = 0;
+				}
+				i++;
 			}
 		}
 	}
