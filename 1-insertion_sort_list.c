@@ -8,7 +8,6 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *tmp;
 	listint_t *current_node = list[0];
-	int i;
 
 	if ((list != NULL) && (current_node->next != NULL))
 	{
