@@ -6,7 +6,7 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *tmp;
+	listint_t *tmp = malloc(sizeof(listint_t));
 	listint_t *current_node = list[0];
 
 	if ((list != NULL) && (current_node->next != NULL))
@@ -33,4 +33,5 @@ void insertion_sort_list(listint_t **list)
 				current_node = current_node->next;
 		}
 	}
+	free (tmp);
 }
