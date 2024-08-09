@@ -7,9 +7,10 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	int i, tmp;
+	size_t i;
 	int sorted = 0;
-	int j = 0;
+	int tmp;
+	size_t j = 0;
 
 	if ((array != NULL) && (size >= 2))
 	{
