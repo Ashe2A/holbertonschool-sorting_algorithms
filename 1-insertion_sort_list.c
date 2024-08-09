@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * bubble_sort - Sort an array
+ * insertion_sort_list - Sort an array with insertion
  * @list: the array to sort
  */
 void insertion_sort_list(listint_t **list)
@@ -28,7 +28,6 @@ void insertion_sort_list(listint_t **list)
 					current_node->next->prev = tmp;
 				current_node->next = tmp;
 				tmp->prev = current_node;
-				
 				print_list(list[0]);
 			}
 			else
