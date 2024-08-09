@@ -2,7 +2,7 @@
 
 /**
  * insertion_sort_list - Sort an array with insertion
- * @list: the array to sort
+ * @list: the linked list to sort
  */
 void insertion_sort_list(listint_t **list)
 {
