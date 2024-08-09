@@ -17,15 +17,18 @@ void insertion_sort_list(listint_t **list)
 			if ((current_node->prev != NULL)
 			&& (current_node->n < current_node->prev->n))
 			{
-				tmp = current_node->prev;
+				tmp[0] = (current_node->prev)[0];
 				current_node->prev = current_node->prev->prev;
 				if (current_node->prev != NULL)
 					current_node->prev->next = current_node;
+				else
+					list[0] = current_node;
 				tmp->next = current_node->next;
 				if (current_node->next != NULL)
 					current_node->next->prev = tmp;
 				current_node->next = tmp;
 				tmp->prev = current_node;
+				
 				print_list(list[0]);
 			}
 			else
