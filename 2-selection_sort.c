@@ -18,19 +18,19 @@ void selection_sort(int *array, size_t size)
 		{
 			if (j == size)
 				j = 0;
-			i = size;
+			i = 0;
 			sorted = 1;
-			while (i >= 0)
+			while ((array[i] != '\0') || (i < size))
 			{
-				if (array[j] > array[i])
+				if (array[j] > array[size - i - 1])
 				{
-					tmp = array[i];
-					array[i] = array[j];
+					tmp = array[size - i - 1];
+					array[size - i - 1] = array[j];
 					array[j] = tmp;
 					print_array(array, size);
 					sorted = 0;
 				}
-				i--;
+				i++
 			}
 			j++;
 		}
